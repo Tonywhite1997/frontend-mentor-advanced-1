@@ -1,0 +1,238 @@
+@import "../css/_variables.scss";
+@import "./info";
+@import "./plan";
+@import "./box";
+@import "./rectBox";
+@import "./addons";
+@import "./summary";
+@import "./thanks";
+
+@font-face {
+    font-family: 'Ubuntu-Bold';
+    src: url('../assets/fonts/Ubuntu-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu-Medium';
+    src: url('../assets/fonts/Ubuntu-Medium.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu-regular';
+    src: url('../assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: 'Ubuntu-Bold', sans-serif;
+}
+
+button{
+    cursor: pointer;
+}
+
+body{
+    font-family: 'Ubuntu-Regular', sans-serif;
+    background-color: $Magnolia;
+    min-height: 100vh;
+
+    main{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        section{
+            height: 70%;
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            gap: 1em;
+            padding:.5em .5em;
+            background-color: $White;
+            border-radius: .5em;
+
+            .main-steps{
+                width: 200px;
+                border-radius: .5em;
+                background: url("../assets/images/bg-sidebar-desktop.svg");
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-left: 1em;
+                padding-top: 1.5em;
+                color: white;
+
+                .step{
+                    display: flex;
+                    align-items: center;
+                    gap: .5em;
+                    margin-bottom: 1em;
+                    cursor: pointer;
+
+                    .step-num{
+                        border: 1px solid $White;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    small{
+                        color: $Light-gray;
+                        font-size: .7rem;
+                    }
+                    p{
+                        font-size: .8rem;
+                    }
+                }
+            }
+
+            .main-contents-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                width: calc(100% - 200px);
+                padding-bottom: 1em;
+                
+                
+                .main-contents{
+                    // border: 1px solid red;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 2em;
+                    padding-bottom: 1em;
+                    padding-inline: 1em;
+                    overflow: hidden;
+                }
+
+                .buttons {
+                    // border: 1px solid red;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 1em;
+                    width: 100%;
+                    padding-inline: 1em;
+
+                    button {
+                        padding: .8em 1em;
+                        background-color: $Marine-blue;
+                        color: $White;
+                        font-weight: 600;
+                        font-size: .8rem;
+                        border: none;
+                        border-radius: .3em;
+
+                        &:hover{
+                            background-color: $Pastel-blue;
+                        }
+                    }
+
+                    .back-button {
+                        background-color: $White;
+                        color: $Cool-gray;
+
+                        &:hover {
+                            color: $Marine-blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1040px){
+
+    body{
+        main{
+    
+            section{
+                width: 70%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px){
+
+    body{
+        main{
+    
+            section{
+                width: 90%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 650px){
+
+    body{
+        main{
+            section{
+                position: relative;
+                flex-direction: column;
+                min-height: 100%;
+                width: 100%;
+                gap: 0;
+                padding: 0;
+                align-items: center;
+                background-color: $Magnolia;
+                
+                .main-steps{
+                    border-radius: 0;
+                    height: 220px;
+                    width: 100%;
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    background-position:10% 90%;
+                    padding-top: 2em;
+                    gap: 1em;
+
+                    small, p{
+                        display: none;
+                    }
+                }
+
+                .main-contents-container{
+                    // border: 1px solid red;
+                    width: 100%;
+                    min-height: calc(100vh - 220px);
+                    z-index: 1;
+                    padding: 0;
+                    padding-top: 1em;
+                    justify-content: flex-end;
+                    
+                    .main-contents{
+                        background-color: $White;
+                        border-radius: .5em;
+                        width: 90%;
+                        top: 20%;
+                        position: absolute;
+                    }
+
+                    .buttons{
+                        background-color: $White;
+                        padding-block: .8em;
+                    }
+                }
+
+            }
+        }
+    }
+}

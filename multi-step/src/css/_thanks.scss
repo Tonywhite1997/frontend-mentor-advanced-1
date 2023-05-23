@@ -1,0 +1,21 @@
+.thanks-page{
+    // border: 1px solid red;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: .3em;
+    background-color: $White;
+    padding-block: 6em;
+    text-align: center;
+    gap: 1em;
+
+    h2{
+        color: $Marine-blue;
+    }
+    p{
+        color: $Cool-gray;
+    }
+}

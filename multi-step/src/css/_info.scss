@@ -1,0 +1,57 @@
+.info{
+    font-family: 'Ubuntu-Regular', sans-serif;
+    h1 {
+        margin-bottom: .3em;
+        color: $Marine-blue;
+        // font-family: 'Ubuntu-Bold', sans-serif;
+    }
+    
+    p {
+        color: $Cool-gray;
+        font-size: .85rem;
+    }
+
+    .form{
+        margin-top: 2em;
+
+        &-div{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1em;
+
+            .label-div{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+ 
+                label{
+                    color: $Marine-blue;
+                    font-weight: 500;
+                    font-size: .9rem;
+                    margin-bottom: .3em;
+                    font-family: 'Ubuntu-Medium', sans-serif;
+                }
+
+                small{
+                    color: $Strawberry-red;
+                }
+            }
+
+
+            input{
+                height: 40px;
+                text-indent: .5em;
+                border-radius: .3em;
+                border: none;
+                border:1px solid $Cool-gray;
+                color: $Marine-blue;           
+                font-weight: 600;
+                outline: none;
+
+                &:focus{
+                    border: 1px solid blue;
+                }
+            }
+        }
+    }
+}

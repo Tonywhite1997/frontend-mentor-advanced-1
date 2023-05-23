@@ -1,0 +1,41 @@
+.rect-box{
+    border: 1px solid $Light-gray;
+    display: flex;
+    align-items: center;
+    padding-inline: .5em;
+    justify-content: space-between;
+    padding-block: .5em;
+    border-radius: .3em;
+    cursor: pointer;
+    
+    &:hover{
+        border: 1px solid $Purplis-blue;
+    }
+
+    &-left{
+        display: flex;
+        gap: .5em;
+
+        .text-container{
+            // border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: .2em;
+
+            h5{
+                color: $Marine-blue;
+                font-family: 'Ubuntu-Medium', sans-serif;
+            }
+            p{
+                font-size: .8rem;
+                color: $Cool-gray;
+                margin: 0;
+            }
+        }
+    }
+    small {
+        color: $Purplis-blue;
+    }
+
+}

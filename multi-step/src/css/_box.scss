@@ -1,0 +1,55 @@
+.box{
+    border: 1px solid $Light-gray;
+    height: 130px;
+    width: 100px;
+    border-radius: .3em;
+    padding: .8em .5em;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2em;
+
+    &:hover{
+        border: 1px solid $Purplis-blue;
+    }
+    
+
+    img{
+        width: 30px;
+    }
+
+    h5{
+        color: $Marine-blue;
+        font-family: 'Ubuntu-Medium';
+    }
+    small,p{
+        color: $Cool-gray;
+        font-size: .7rem;
+    }
+    p{
+        color: $Marine-blue;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .box {
+        flex-direction: row;
+        width: 90%;
+        height: 70px;
+        justify-content: flex-start;
+        gap: 1em;
+        align-items: center;
+        margin-bottom: 1em;
+        // border: 1px solid red;
+
+        h5{
+            font-size: 1rem;
+        }
+
+        small,p{
+            font-size: 1rem;
+        }
+    }
+}

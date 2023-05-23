@@ -1,0 +1,92 @@
+.summary{
+    // border: 1px solid red;
+    padding: 1em;
+
+    h1{
+        color: $Marine-blue;
+        margin-bottom: .1em;
+    }
+
+    .description{
+        color: $Cool-gray;
+        font-size: .8rem;
+        margin-bottom: 1em;
+    }
+
+    .summary-container{
+        padding: 1em 1em;
+        border-radius: .5em;
+        background-color: $Alabaster;
+        margin-bottom: 1em;
+
+        .summary-plan{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: .1em;
+
+            h5{
+                // border: 1px solid red;
+                font-family: 'Ubuntu-Medium', sans-serif;
+                font-size: .8rem;
+                color: $Marine-blue;
+            }
+
+            small{
+                font-family: 'Ubuntu-Medium', sans-serif;
+                font-size: .8rem;
+                color: $Marine-blue;
+                font-weight: 600;
+            }
+        }
+        .change-plan{
+            // border: 1px solid red;
+            margin-bottom: 1em;
+            font-size: .7rem;
+            cursor: pointer;
+
+            &:hover{
+                text-decoration: underline;
+                color: $Purplis-blue;
+            }
+        }
+        hr{
+            border: none;
+            height: 1px;
+            background-color: $Light-gray;
+            margin-bottom: .7em;
+            
+        }
+        .add-on-container{
+            // border: 1px solid red;
+            display: flex;
+            justify-content: space-between;
+            padding-block: .5em;
+
+            p{
+                font-size: .7rem;
+                color: $Cool-gray;
+            }
+            small{
+                font-family: 'Ubuntu-Medium', sans-serif;
+                font-size: .7rem;
+                color: $Marine-blue;
+                font-weight: 500;
+            }
+        }
+    }
+    .total-price{
+        // border: 1px solid red;
+        font-family: 'Ubuntu-Medium', sans-serif;
+        display: flex;
+        justify-content: space-between;
+
+        p{
+            font-size: .75rem;
+            color: $Cool-gray;
+        }
+        small{
+            font-weight: 600;
+            color: $Purplis-blue;
+        }
+    }
+}

@@ -1,0 +1,96 @@
+.plan{
+    // border: 1px solid red;
+    height: 100%;
+
+    h1{
+        color: $Marine-blue;
+        margin-bottom: .2em;
+    }
+
+    .description{
+        font-size: .85rem;
+        color: $Cool-gray;
+        margin-bottom: 2em;
+    }
+
+    .plans-container{
+        display: flex;
+        gap: 1em; 
+    }
+    
+    .plan-selector{
+        font-family: 'Ubuntu-Medium';
+        display: flex; 
+        justify-content: center;
+        background-color: $Magnolia;
+        align-items: center;
+        padding: .5em 0;
+        border-radius: .2em;
+        gap: 1em;
+
+        p{
+            font-size: .75rem;
+            color: $Marine-blue;
+            font-weight: 600;
+        }
+
+        .plan-slider{
+            position: relative;
+            width: 40px;
+            height: 20px;
+            border-radius: 100vmax;
+            background-color: $Marine-blue;
+            cursor: pointer;
+            
+            &.monthly::after{
+                content: " ";
+                position: absolute;
+                top: 50%;
+                left: .2em;
+                transform: translateY(-50%);
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                background-color: $White;
+                transition: all 200ms ease-in-out;
+            }
+            &.yearly::after{
+                content: " ";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                background-color: $White;
+                left: 1.3em;
+                transition: all 200ms ease-in-out;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:650px){
+    .plan{
+        .description{
+            font-size: 1.125rem;
+            margin-bottom: .5em;
+        }
+
+        .plans-container{
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            padding-top: 1em;
+            gap: 0;
+        }
+
+        .plan-selector{
+            // margin-top: 1em;
+            padding: .8em 0;
+        }
+
+        
+    }
+}
